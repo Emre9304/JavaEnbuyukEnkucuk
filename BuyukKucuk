@@ -1,0 +1,44 @@
+package giris;
+import java.sql.SQLOutput;
+import java.util.Scanner;
+public class class3 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String userName, password;
+        System.out.println("Kaç tane sayı gireceksiniz: ");
+        int sayi ;
+        int enbuyuk=0;
+        int enkucuk=0;
+
+        int sayisayisi = input.nextInt();
+        for (int i = 1; i<=sayisayisi;i++){
+            System.out.println("Sayıyı giriniz:");
+            sayi = input.nextInt();
+            for (int j = 1; j>=i;j++){
+                enbuyuk = sayi;
+                enkucuk = sayi;
+            }
+
+            if(sayi>enbuyuk){
+                enbuyuk = sayi;
+
+            }
+            else{
+
+            if (sayi < enkucuk){
+                enkucuk = sayi;
+
+            }
+            else{
+                continue;
+            }}
+
+        }
+        System.out.println("En büyük sayı: "+enbuyuk);
+        System.out.println("En küçük sayı: "+enkucuk);
+
+
+    }
+
+
+}
